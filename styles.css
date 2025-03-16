@@ -1,0 +1,126 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: linear-gradient(135deg, #00ddeb, #ff00cc); /* Default: Cyan to Magenta */
+    transition: background 0.5s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.search-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+input, button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+}
+
+button {
+    background: #ff3366; /* Bright Coral */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #cc2952; /* Darker Coral */
+}
+
+.weather-card, .forecast-card, .mood-card, .history {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in;
+}
+
+.weather-card img {
+    vertical-align: middle;
+    animation: pulse 2s infinite; /* Animated Icon */
+}
+
+.forecast-card {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    background: rgba(240, 240, 255, 0.8); /* Light Blue Tint */
+}
+
+.forecast-item {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 230, 230, 0.9); /* Soft Pinkish-White */
+    border-radius: 10px;
+    min-width: 100px;
+}
+
+.mood-card {
+    background-size: cover;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(50, 50, 50, 0.7); /* Fallback Dark Overlay */
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.history li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: #ff3366; /* Coral Text */
+}
+
+.history li:hover {
+    background: #fff0f5; /* Light Pink Hover */
+}
+
+.error {
+    color: #ff4444;
+    font-weight: bold;
+    background: rgba(255, 230, 230, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}

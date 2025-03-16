@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Explorer</h1>
+        <div class="search-bar">
+            <input type="text" id="cityInput" placeholder="Enter city (e.g., London, UK)">
+            <button onclick="getWeather()">Search</button>
+            <button id="unitToggle" onclick="toggleUnits()">°C / °F</button>
+        </div>
+        <div id="weatherResult" class="weather-card"></div>
+        <div id="forecast" class="forecast-card"></div>
+        <div id="moodSuggestion" class="mood-card"></div>
+        <div id="searchHistory" class="history">
+            <h3>Recent Searches</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
